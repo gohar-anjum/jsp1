@@ -1,5 +1,12 @@
-console.log("Helo g");
-prompt("How it is going");
-console.warn("Dont refresh");
-console.error("Error Occured");
-alert("There is nothing good for you");
+var prev = 0;
+var cur = 1;
+
+console.log(prev);
+console.log(cur);
+
+for(var i = 0 ; i < 7 ; i++){
+    var next = prev+cur;
+    console.log(next);
+    prev = cur;
+    cur = next;
+}
