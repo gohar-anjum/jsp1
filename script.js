@@ -1,17 +1,9 @@
 
-var flag=0;
-document.querySelector("button").addEventListener("click",function(){
-    if(flag==0)
-        {
-            document.querySelector("h4").innerHTML = "Request Sent"
-            document.querySelector("h4").style.color = "Green"
-            document.querySelector('h5').innerHTML="Add Friend"
-            flag=1   
+var arr = [-1,2,-5,4,-74,3,5,-643,-6,74];
+
+arr.forEach(function(val, index){
+    if(val<0){
+        arr.splice(index, 1);
+        index=0;
     }
-    else{
-        document.querySelector("h4").innerHTML = "Cancel Request?"
-        document.querySelector("h4").style.color = "Red"
-        document.querySelector('h5').innerHTML="Remove Friend"
-        flag=1 
-    }
-} )
+})
