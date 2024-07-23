@@ -41,6 +41,7 @@ html, body{
     padding: 20px 10px;
 }
 #card button{
+    cursor: pointer;
     padding: 6px 15px;
     color: #fff;
     background-color: rgba(65, 105, 225, 0.637);
@@ -52,4 +53,10 @@ html, body{
 }
 #card #Friends{
     color: rgba(65, 225, 132, 0.637);
+}
+#card button.Red{
+    background-color: rgba(233, 64, 64, 0.514);
+}
+#card button.Blue{
+    background-color: rgba(65, 105, 225, 0.637);
 }
