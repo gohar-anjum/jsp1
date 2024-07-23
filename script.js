@@ -10,8 +10,9 @@ var arr = [
     }
 ]
 
-var interceptor = "";
-arr.forEach(function(val){
+function display() {
+    var interceptor = "";
+arr.forEach(function(val, index){
     interceptor = interceptor + 
     `<div id="card">
         <div id="img">
@@ -20,8 +21,16 @@ arr.forEach(function(val){
             <h3>${val.name}</h3>
             <h5>${val.Status}</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque deserunt neque ratione.</p>
-            <button>Add Friend</button>
+            <button id="${index}">Add Friend</button>
     </div>`
 })
-
 document.querySelector("#main").innerHTML = interceptor;
+}
+display();
+
+document.querySelector("#main")
+    .addEventListener("click", function(details){
+        arr[details.target.id].Status= "Friends";
+        display();
+
+    })
