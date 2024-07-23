@@ -19,9 +19,9 @@ arr.forEach(function(val, index){
             <img src="${val.Img}">
         </div>
             <h3>${val.name}</h3>
-            <h5>${val.Status}</h5>
+            <h5 id="${val.Status}">${val.Status}</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque deserunt neque ratione.</p>
-            <button id="${index}">Add Friend</button>
+            <button id="${index}">${val.Status === "Stranger" ? "Add Friend" : "Remove Friend"}</button>
     </div>`
 })
 document.querySelector("#main").innerHTML = interceptor;
